@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--装载fragment的容器，也可以用其它的布局-->
+    <LinearLayout
+        android:id="@+id/Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+    <!-- 只用于切换fragment,由radiobutton实现点击监听-->
+    <com.wenthkim.pro.fragment_radiobutton.widget.FragmentTabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#ffffff"
+        android:fitsSystemWindows="true">
+        <!-- 首页的tab-->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center">
+
+                <RadioButton
+                    android:id="@+id/rdoBtn_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableTop="@drawable/home_selector"
+                    android:gravity="center"
+                    android:paddingTop="3dp"
+                    android:text="首页"
+                    android:textColor="@drawable/tabtext_selector"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_tab_tips"
+                android:padding="2dp"
+                android:text="99"
+                android:textColor="#ffffff"
+                android:visibility="visible" />
+        </FrameLayout>
+        <!--  购物车的tab-->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center">
+
+                <RadioButton
+                    android:id="@+id/rdoBtn_shopcar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableTop="@drawable/shopcar_selector"
+                    android:gravity="center"
+                    android:paddingTop="3dp"
+                    android:text="购物车"
+                    android:textColor="@drawable/tabtext_selector"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:padding="3dp"
+                android:textSize="10sp"
+                android:visibility="visible" />
+        </FrameLayout>
+        <!--android:drawableRight="@drawable/bg_tab_roundtip"-->
+        <!-- 我的tab-->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center">
+
+                <RadioButton
+                    android:id="@+id/rdoBtn_mine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableTop="@drawable/mine_selector"
+                    android:gravity="center"
+                    android:paddingTop="3dp"
+                    android:text="我的"
+                    android:textColor="@drawable/tabtext_selector"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:padding="3dp"
+                android:visibility="visible" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
